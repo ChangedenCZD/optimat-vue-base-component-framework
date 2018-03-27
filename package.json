@@ -1,6 +1,6 @@
 {
   "name": "optimat-vue-base-component-framework",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "基础组件框架",
   "main": "dist/index.js",
   "scripts": {
@@ -38,7 +38,6 @@
     "fs": "0.0.1-security",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
-    "optimat-vue-assets": "0.0.2",
     "path": "^0.12.7",
     "sass-loader": "^6.0.7",
     "shelljs": "^0.8.1",
