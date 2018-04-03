@@ -1,6 +1,6 @@
 {
   "name": "optimat-vue-base-component-framework",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "基础组件框架",
   "main": "dist/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "url": "https://github.com/ChangedenCZD/optimat-vue-base-component-framework/issues"
   },
   "homepage": "https://github.com/ChangedenCZD/optimat-vue-base-component-framework#readme",
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-runtime": "^6.22.0",
