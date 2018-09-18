@@ -1,4 +1,8 @@
 import Context from './Context';
+import { mapActions, mapGetters } from 'vuex';
+import Utils from 'optimat-vue-utils';
+
+const BrowserUtils = Utils.BrowserUtils;
 
 class BaseModule extends Context {
     constructor () {
@@ -34,6 +38,7 @@ class BaseModule extends Context {
     }
 
     onCreate () {
+        BrowserUtils.initApp(this.app);
     }
 
     onMount () {
@@ -57,8 +62,12 @@ class BaseModule extends Context {
     setCompute (options) {
         this.computed = options || {};
     }
+
+    assemIcons () {
+        BrowserUtils.fetchIcon(this.app);
+    }
 }
 
 module.exports = {
-    BaseModule
+    BaseModule, mapActions, mapGetters
 };

@@ -1,7 +1,7 @@
 {
-  "output": "test",
-  "name": "optimat-test",
+  "output": "../optimat-vue-selector-dialog",
+  "name": "optimat-vue-selector-dialog",
   "version": "0.0.1",
-  "description": "基础组件框架",
+  "description": "列表选择对话框",
   "author": "Changeden"
 }

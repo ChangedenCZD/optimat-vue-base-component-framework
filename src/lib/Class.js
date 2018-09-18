@@ -1,5 +1,7 @@
-const BrowserUtils = require('../utils/BrowserUtils');
-const ObjectSupport = require('../utils/ObjectSupport');
+import Utils from 'optimat-vue-utils';
+
+const BrowserUtils = Utils.BrowserUtils;
+const ObjectSupport = Utils.ObjectSupport;
 
 class Class {
     static to (url) {

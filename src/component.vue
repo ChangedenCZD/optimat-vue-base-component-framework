@@ -47,7 +47,6 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         position: relative;
-        z-index: 1;
     }
 
     ::-webkit-scrollbar {
@@ -145,19 +144,13 @@
     }
 
     /**阴影*/
+
     .shadow {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     }
 
-    .shadow-top {
-        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.25);
-    }
-
-    .shadow-bottom {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    .shadow:focus {
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
     }
 
     .global-layout {
@@ -187,6 +180,16 @@
 
     .clickable:active {
         background-color: gainsboro;
+        transition: all 0.3s ease-out;
+    }
+
+    .clickable-transparent {
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+    }
+
+    .clickable-transparent:active {
+        background-color: #bfbfbf;
         transition: all 0.3s ease-out;
     }
 
@@ -351,40 +354,42 @@
     $fontSizeNormal: rem(22px);
     $fontSizeMiddle: rem(24px);
     $fontSizeLarge: rem(26px);
-    .fs-nano {
+    .font-size-nano {
         font-size: $fontSizeNano;
     }
 
-    .fs-mini {
+    .font-size-mini {
         font-size: $fontSizeMini;
     }
 
-    .fs-small {
+    .font-size-small {
         font-size: $fontSizeSmall;
     }
 
-    .fs-normal {
+    .font-size-normal {
         font-size: $fontSizeNormal;
     }
 
-    .fs-middle {
+    .font-size-middle {
         font-size: $fontSizeMiddle;
     }
 
-    .fs-large {
+    .font-size-large {
         font-size: $fontSizeLarge;
     }
 
     /**颜色*/
-    $red: #F04055;
     $black: #222222;
     $blackLight: #4b4b57;
     $gray: #989898;
     $default: #ededed;
     $white: #FFFFFF;
-    $orange: #EE8A1F;
-    $blue: #00AAEE;
-    $zjyx: #06a0f3;
+    $color-unizone: #F04055;
+    $color-hdyx: #EE8A1F;
+    $color-gdyx: #00AAEE;
+    $color-zjyx: #06a0f3;
+    $color-hzzd: #EE8A1F;
+    $blue: #00BFFF;
 
     * {
         font-size: $fontSizeNormal;
@@ -395,104 +400,116 @@
     }
 
     /**文字颜色*/
-    .text-red {
-        color: $red;
-    }
 
-    .text-black {
+    .text-color-black {
         color: $black;
     }
 
-    .text-black-light {
+    .text-color-black-light {
         color: $blackLight;
     }
 
-    .text-gray {
+    .text-color-gray {
         color: $gray;
     }
 
-    .text-default {
+    .text-color-default {
         color: $default;
     }
 
-    .text-white {
+    .text-color-white {
         color: $white;
     }
 
-    .text-orange {
-        color: $orange;
+    .text-color-unizone {
+        color: $color-unizone;
     }
 
-    .text-blue {
-        color: $blue;
+    .text-color-hdyx {
+        color: $color-hdyx;
     }
 
-    .text-zjyx {
-        color: $zjyx;
+    .text-color-gdyx {
+        color: $color-gdyx;
+    }
+
+    .text-color-zjyx {
+        color: $color-zjyx;
+    }
+
+    .text-color-hzzd {
+        color: $color-hzzd;
     }
 
     /**背景颜色*/
 
-    .bg-red {
-        background-color: $red;
-    }
-
-    .bg-black {
+    .background-black {
         background-color: $black;
     }
 
-    .bg-black-light {
+    .background-black-light {
         background-color: $blackLight;
     }
 
-    .bg-gray {
+    .background-gray {
         background-color: $gray;
     }
 
-    .bg-default {
+    .background-default {
         background-color: $default;
     }
 
-    .bg-white {
+    .background-white {
         background-color: $white;
     }
 
-    .bg-orange {
-        background-color: $orange;
+    .background-color-unizone {
+        background-color: $color-unizone;
     }
 
-    .bg-blue {
-        background-color: $blue;
+    .background-color-hdyx {
+        background-color: $color-hdyx;
     }
 
-    .bg-zjyx {
-        background-color: $zjyx;
+    .background-color-gdyx {
+        background-color: $color-gdyx;
+    }
+
+    .background-color-zjyx {
+        background-color: $color-zjyx;
+    }
+
+    .background-color-hzzd {
+        background-color: $color-hzzd;
     }
 
     /*border*/
-
-    .border-red {
-        border-color: $red;
+    .border-color-unizone {
+        border-color: $color-unizone;
     }
 
-    .border-orange {
-        border-color: $orange;
+    .border-color-hdyx {
+        border-color: $color-hdyx;
     }
 
-    .border-blue {
-        border-color: $blue;
+    .border-color-gdyx {
+        border-color: $color-gdyx;
     }
 
-    .border-zjyx {
-        border-color: $zjyx;
+    .border-color-zjyx {
+        border-color: $color-zjyx;
+    }
+
+    .border-color-hzzd {
+        border-color: $color-hzzd;
     }
 
     /**button*/
 
-    button[type="red"] {
+    button[type="unizone"] {
         color: white;
-        background-color: $red;
-        border-color: $red;
+        background-color: $color-unizone;
+        border-color: $color-unizone;
     }
 
     button[type="black"] {
@@ -507,16 +524,16 @@
         border-color: $gray;
     }
 
-    button[type="orange"] {
+    button[type="hdyx"] {
         color: white;
-        background-color: $orange;
-        border-color: $orange;
+        background-color: $color-hdyx;
+        border-color: $color-hdyx;
     }
 
-    button[type="blue"] {
+    button[type="gdyx"] {
         color: white;
-        background-color: $blue;
-        border-color: $blue;
+        background-color: $color-gdyx;
+        border-color: $color-gdyx;
     }
 
     button[type="white"] {
@@ -527,8 +544,14 @@
 
     button[type="zjyx"] {
         color: white;
-        background-color: $zjyx;
-        border-color: $zjyx;
+        background-color: $color-zjyx;
+        border-color: $color-zjyx;
+    }
+
+    button[type="hzzd"] {
+        color: white;
+        background-color: $color-hzzd;
+        border-color: $color-hzzd;
     }
 
     button {
@@ -545,7 +568,7 @@
         background-color: rgba(39, 38, 54, 0.8);
     }
 
-    button[type="red"]:active {
+    button[type="unizone"]:active {
         background-color: rgba(240, 66, 88, 0.8);
     }
 
@@ -553,11 +576,11 @@
         background-color: rgba(204, 204, 204, 0.8);
     }
 
-    button[type="orange"]:active {
+    button[type="hdyx"]:active {
         background-color: rgba(238, 138, 31, 0.8);
     }
 
-    button[type="blue"]:active {
+    button[type="gdyx"]:active {
         background-color: rgba(0, 170, 238, 0.8);
     }
 
@@ -567,6 +590,10 @@
 
     button[type="zjyx"]:active {
         background-color: rgba(6, 160, 243, 0.8);
+    }
+
+    button[type="hzzd"]:active {
+        background-color: rgba(238, 138, 31, 0.8);
     }
 
     /**尺寸*/
@@ -749,7 +776,7 @@
         margin-right: $s20;
     }
 
-    $borderStyle: 1px solid #eee;
+    $borderStyle: 1px solid #d9d9d9;
 
     .ui-base-component-framework-layout {
         * {

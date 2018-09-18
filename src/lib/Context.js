@@ -4,6 +4,7 @@ class BaseClass extends Class {
     constructor () {
         super();
     }
+
 }
 
 module.exports = BaseClass;
